@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAO XIN Photography</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* 基础样式 */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            top: 0;
+        }
+
+        .logo {
+            float: left;
+            font-size: 1.5rem;
+        }
+
+        nav {
+            float: right;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero {
+            background-image: url('hero-image.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            padding: 2rem;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+
+        section {
+            padding: 4rem 2rem;
+        }
+
+        /* 表单样式 */
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        form input, form textarea {
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        form button {
+            padding: 0.75rem;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #333;
+            color: white;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+
+            nav ul li {
+                margin-left: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul li {
+                display: block;
+                margin: 0;
+            }
+
+            nav ul {
+                text-align: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">HAO XIN Photography</div>
+        <nav>
+            <ul>
+                <li><a href="#overview">概览</a></li>
+                <li><a href="#food">食物</a></li>
+                <li><a href="#drinks">饮品</a></li>
+                <li><a href="#product">产品</a></li>
+                <li><a href="#portraits">肖像</a></li>
+                <li><a href="#events">活动</a></li>
+                <li><a href="#about">关于</a></li>
+                <li><a href="#contact">联系</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="overview" class="hero">
+        <h1>专业的人像、婚礼和静物摄影师 - 长春</h1>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <a href="image1.jpg" data-lightbox="gallery" data-title="Whiskey Bottle">
+            <div class="gallery-item">
+                <img src="image1.jpg" alt="Whiskey Bottle">
+            </div>
+        </a>
+        <a href="image2.jpg" data-lightbox="gallery" data-title="Oysters">
+            <div class="gallery-item">
+                <img src="image2.jpg" alt="Oysters">
+            </div>
+        </a>
+        <a href="image3.jpg" data-lightbox="gallery" data-title="Fish">
+            <div class="gallery-item">
+                <img src="image3.jpg" alt="Fish">
+            </div>
+        </a>
+        <a href="image4.jpg" data-lightbox="gallery" data-title="Watch">
+            <div class="gallery-item">
+                <img src="image4.jpg" alt="Watch">
+            </div>
+        </a>
+    </section>
+
+    <section id="food">
+        <h2>食物摄影</h2>
+        <p>这里展示了我们的一些食物摄影作品。</p>
+        <!-- 可以添加更多食物摄影作品 -->
+    </section>
+
+    <section id="drinks">
+        <h2>饮品摄影</h2>
+        <p>这里展示了我们的一些饮品摄影作品。</p>
+        <!-- 可以添加更多饮品摄影作品 -->
+    </section>
+
+    <section id="product">
+        <h2>产品摄影</h2>
+        <p>这里展示了我们的一些产品摄影作品。</p>
+        <!-- 可以添加更多产品摄影作品 -->
+    </section>
+
+    <section id="portraits">
+        <h2>肖像摄影</h2>
+        <p>这里展示了我们的一些肖像摄影作品。</p>
+        <!-- 可以添加更多肖像摄影作品 -->
+    </section>
+
+    <section id="events">
+        <h2>活动摄影</h2>
+        <p>这里展示了我们的一些活动摄影作品。</p>
+        <!-- 可以添加更多活动摄影作品 -->
+    </section>
+
+    <section id="about">
+        <h2>关于我们</h2>
+        <p>我们是一家专注于高端摄影、人物和静物摄影的摄影工作室，位于长春。</p>
+    </section>
+
+    <section id="contact">
+        <h2>联系我们</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="你的名字" required>
+            <input type="email" placeholder="你的邮箱" required>
+            <textarea placeholder="你的信息" required></textarea>
+            <button type="submit">发送</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2024 Hao Xin Photography</p>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script>
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // 联系表单处理
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('感谢您的留言！我们会尽快回复您。');
+            this.reset();
+        });
+
+        // Lightbox 配置
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true
+        });
+    </script>
+</body>
+</html>
